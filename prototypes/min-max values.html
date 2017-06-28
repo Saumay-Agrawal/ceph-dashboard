@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Prototype 2</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+	<style type="text/css">
+		div{
+			height: 800px;
+			width: 800px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<div>
+	<canvas id="minmax-chart"></canvas>
+</div>
+	
+	<script>
+	var ctx = document.getElementById("minmax-chart");
+
+	var myChart = new Chart(ctx, {
+	    
+	    type: 'line',
+	    
+	    data: {
+			
+			labels : ["1:01","1:02","1:03","1:04","1:05","1:06","1:07","1:08","1:09","1:10","1:11","1:12","1:13","1:14","1:15","1:16","1:17","1:18","1:19","1:20"],
+
+			datasets: [ {
+				data: [206,193,156,168,150,148,120,125,120,154,149,104,124,135,130,132,106,120,120,125],
+				label: "Min latency",
+				borderColor: "rgb(62, 149, 205)",
+				fillColor: "rgba(62, 149, 205, 0.2)",
+				lineTension: 0
+			}, { 
+				data: [215,467,176,192,220,230,430,250,210,264,234,228,241,219,251,360,239,253,229,268],
+				label: "Max latency",
+				borderColor: "rgb(142, 94, 162)",
+				fillColor: "rgba(142, 94, 162, 0.2)",
+				lineTension: 0
+			}
+			]
+		
+		},
+	    
+	    options: {
+
+	    	title: {
+	    		display: true,
+	    		text: 'Prototype for Minimum and Maximum values',
+	    		fontStyle: 'bold',
+	    		fontSize: 20
+	    	},
+	    	legend: {
+	    		display: true,
+	    		position: 'right'
+	    	}
+
+	    }
+	});
+	</script>
+
+</body>
+
+</html>

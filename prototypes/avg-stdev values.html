@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Prototype 3</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+	<style type="text/css">
+		div{
+			height: 800px;
+			width: 800px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<div>
+<canvas id="avg-stdev-chart"></canvas>
+</div>
+
+	<script>
+	var ctx = document.getElementById("avg-stdev-chart");
+	var myChart = new Chart(ctx, {
+	    
+	    type: 'line',
+	    
+	    data: {
+			
+			labels : ["1:01","1:02","1:03","1:04","1:05","1:06","1:07","1:08","1:09","1:10","1:11","1:12","1:13","1:14","1:15","1:16","1:17","1:18","1:19","1:20"],
+
+			datasets: [ {
+				data: [210.6666667,307,168,176,189.6666667,178.3333333,227,174,160,210.3333333,185.6666667,176,178,168,185.3333333,246.3333333,165,201,165.6666667,176.6666667],
+				label: "Average",
+				borderColor: "rgb(62, 149, 205)",
+				fillColor: "rgba(62, 149, 205, 0.2)"
+			}, { 
+				data: [4.509249753,142.6744546,10.58300524,13.85640646,35.92121008,44.97036061,175.8891696,66.73080248,45.82575695,55.0484635,43.68447474,64.37390776,59.01694672,44.79955357,61.15826464,114.001462,67.75691847,71.08445681,56.60683115,79.32422917],
+				label: "Stdev",
+				borderColor: "rgb(142, 94, 162)",
+				fillColor: "rgba(142, 94, 162, 0.2)"
+			}
+			]
+		
+		},
+	    
+	    options: {
+
+	    	title: {
+	    		display: true,
+	    		text: 'Prototype for Average and Stdev values',
+	    		fontStyle: 'bold',
+	    		fontSize: 20
+	    	},
+	    	legend: {
+	    		display: true,
+	    		position: 'right'
+	    	}
+	    	   
+	    }
+	});
+	</script>
+
+</body>
+
+</html>
