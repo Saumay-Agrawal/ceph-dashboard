@@ -1,2 +1,3 @@
 # ceph-dashboard
-Contains the mockups, prototypes and code for UI elements of the ceph dashboard.
+
+This repository contains the various mockups made for the dashboard, code for the prototype graphs and UI screenshots of working graphs.
